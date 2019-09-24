@@ -1,0 +1,53 @@
+h2 {
+    text-align: center;
+}
+
+.pageBorder {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+}
+
+#gameBoard {
+    position: relative;
+}
+
+.button {
+    background: #00FF00;
+    border-radius: 20px;
+    text-align: center;
+    padding: 2px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.button:active {
+    background: green;
+}
+
+#doneMoveButton, #doneAttackButton {
+    margin-top: 2px;
+    width: 50%;
+    display: inline-block;
+}
+
+.phaseSection {
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.phaseSection.half {
+    width: 50%;
+    display: inline-block;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
