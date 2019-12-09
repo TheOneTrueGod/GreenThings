@@ -1,6 +1,7 @@
 class PlayerToken extends Token {
-    constructor (gamestate, room, stage) {
-        super(gamestate, 'player_basic', room, stage);
+    constructor (gamestate, room, stage, humanType) {
+        const spriteName = { PLAYER_BASIC: 'player_basic', PLAYER_ADVANCED: 'player_advanced', PLAYER_ROBOT: 'player_robot'}[humanType];
+        super(gamestate, spriteName, room, stage);
         this.movesPerTurn = 1;
         this.attacksPerTurn = 1;
         this.damage = 2
@@ -66,4 +67,10 @@ class PlayerToken extends Token {
     isAlive() {
         return this.health > 0;
     }
+}
+
+PlayerToken.HUMAN_TYPES = {
+  PLAYER_BASIC: 'PLAYER_BASIC',
+  PLAYER_ADVANCED: 'PLAYER_ADVANCED',
+  PLAYER_ROBOT: 'PLAYER_ROBOT',
 }

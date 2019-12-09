@@ -248,7 +248,7 @@ function TokenDetailsSprite(token, spriteName, clickCallback) {
 
     this.token = token;
     this.createSprite(spriteName);
-    /*this.testSprite = new PIXI.Sprite(AssetLoader.getTexture(spriteName));
+    /*this.testSprite = AssetLoader.createSprite(spriteName);
     this.testSprite.anchor.set(0.5);
     this.testSprite.position.set(TOKEN_SIZE.width / 2, TOKEN_SIZE.height / 2);*/
     this.interactive = true;
@@ -274,7 +274,7 @@ TokenDetailsSprite.prototype.setRotation = function setRotation(angle) {
 
 TokenDetailsSprite.prototype.createSprite = function createSprite(spriteName) {
     if (this.testSprite) { this.removeChild(this.testSprite); }
-    this.testSprite = new PIXI.Sprite(AssetLoader.getTexture(spriteName));
+    this.testSprite = AssetLoader.createSprite(spriteName);
     this.testSprite.anchor.set(0.5);
     this.testSprite.position.set(TOKEN_SIZE.width / 2, TOKEN_SIZE.height / 2);
     this.testSprite.width = TOKEN_SIZE.width;
@@ -309,7 +309,7 @@ TokenSprite.prototype.setVisible = function setVisible(visible) {
 
 TokenSprite.prototype.createSprite = function createSprite(spriteName) {
     if (this.testSprite) { this.removeChild(this.testSprite); }
-    this.testSprite = new PIXI.Sprite(AssetLoader.getTexture(spriteName));
+    this.testSprite = AssetLoader.createSprite(spriteName);
     this.testSprite.anchor.set(0.5);
     this.addChild(this.testSprite);
 };

@@ -20,9 +20,11 @@ class MainGame {
             tokenContainer,
         );
 
-        for (let i = 0; i < 5; i++) {
-            this.tokenController.addToken(new PlayerToken(this.gamestate, this.ship.rooms[0], tokenContainer), this.ship);
+        for (let i = 0; i < 2; i++) {
+            this.tokenController.addToken(new PlayerToken(this.gamestate, this.ship.rooms[0], tokenContainer, PlayerToken.HUMAN_TYPES.PLAYER_BASIC), this.ship);
         }
+        this.tokenController.addToken(new PlayerToken(this.gamestate, this.ship.rooms[0], tokenContainer, PlayerToken.HUMAN_TYPES.PLAYER_ADVANCED), this.ship);
+        this.tokenController.addToken(new PlayerToken(this.gamestate, this.ship.rooms[0], tokenContainer, PlayerToken.HUMAN_TYPES.PLAYER_ROBOT), this.ship);
 
         let room = Math.floor(Math.random() * (this.ship.rooms.length - 1)) + 1;
         this.tokenController.addToken(new Alien(this.gamestate, Alien.ALIEN_TYPES.EGG, this.ship.rooms[room], tokenContainer), this.ship);
